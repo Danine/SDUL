@@ -7,13 +7,12 @@
 	<link href="css/elegant-icons-style.css" rel="stylesheet" />
 	<!-- Custom styles -->
 	<link href="css/style.css" rel="stylesheet">
-
 	<!-- bootstrap theme -->
 	<link href="css/bootstrap-theme.css" rel="stylesheet">
 </head>
 
 <body>
-	<form class="form-horizontal" action="edit_info.php" method="post">
+	<form class="form-horizontal" action="check_info.php" method="post">
 		<section id="container" class="">
 			<header class="header dark-bg">
 				<a href="index.php" class="logo"><img width="163" height="45" src="img/logo.png" alt="Logo"></a>
@@ -67,18 +66,17 @@
 				<section id="main-content">
 					<section class="panel">
 					<?php
-     			 	if(!isset($_COOKIE["userid"]) or $_COOKIE["userid"]=="")
-     				 {
+     			 		if(!isset($_COOKIE["userid"]) or $_COOKIE["userid"]==""){
        				?>
 					<tr>
-					<td>你还没有登录！点<a href="login.php">我</a>登录</td>
+						<td>你还没有登录！点<a href="login.php">我</a>登录</td>
 					</tr>
 					<?php
-    				}
-    				else{
+						}
+						else{
 					?>
 						<header class="panel-heading">
-							个人信息
+							个人信息查询
 						</header>
 						<?php
        					include"config.php";

@@ -2,7 +2,7 @@
 	if(!isset($_POST["userid"])){
 ?>
 <!DOCTYPE php>
-<html lang="en">
+<html lang="zh-CN">
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<title>SDUL学生信息系统</title>
@@ -39,7 +39,7 @@
 							 alt="Logo"></a></p>
 					<div class="input-group">
 						<span class="input-group-addon"><i class="icon_profile"></i></span>
-						<input type="text" name="userid" id="userid" class="form-control" placeholder="Username" autofocus>
+						<input type="text" name="userid" id="userid" class="form-control" placeholder="User-ID" autofocus>
 					</div>
 					<div class="input-group">
 						<span class="input-group-addon"><i class="icon_key_alt"></i></span>
@@ -53,7 +53,6 @@
 					<a href="register.php"><button class="btn btn-info btn-lg btn-block" type="button">Signup</button></a>
 				</div>
 			</form>
-
 		</div>
 	</body>
 </html>
