@@ -49,19 +49,16 @@
 								<i class="icon_piechart"></i>考试安排</a>
 							<ul class="sub"></ul>
 						</li>
-
 						<li class="sub-menu">
 							<a href="javascript:;" class="">
 								<i class="icon_table"></i>请假系统</a>
 							<ul class="sub"></ul>
 						</li>
-
 						<li class="sub-menu">
 							<a href="javascript:;" class="">
 								<i class="icon_documents_alt"></i>投诉反馈</a>
 							<ul class="sub"></ul>
 						</li>
-
 					</ul>
 				</div>
 			</aside>
@@ -95,9 +92,17 @@
 							</tr> -->
 							<div class="form-group">
 								<label class="col-sm-2 control-label">性别</label>
-								<div class="col-sm-10">
-									<label>女</label><input type="radio" value="女" name="s_sex" checked>&nbsp;&nbsp;
-									<label>男</label><input type="radio" value="男" name="s_sex">
+								<div class="col-sm-10 btn-group" data-toggle="buttons">
+									<label class="btn btn-default">
+										<input type="radio" value="女" name="s_sex"> 女
+									</label>
+									<label class="btn btn-default">
+										<input type="radio" value="男" name="s_sex"> 男
+									</label>
+									<!-- <div class="col-sm-10" style="margin-top:7.5px">
+										<label>女</label><input type="radio" value="女" name="s_sex" checked>&nbsp;&nbsp;
+										<label>男</label><input type="radio" value="男" name="s_sex">
+									</div> -->
 								</div>
 							</div>
 							<!-- <tr align=center>
@@ -199,9 +204,11 @@
                                 </div>
 							</div> -->
 							<div>&nbsp;</div>
-							<div align=center>
-									<input type="submit" value="完 成" />&nbsp;
-									<a href="check_info.php"><input type="button" value="返 回" /></a>
+							<div class="form-group">
+								<div align="center">
+										<input type="submit" class="btn btn-primary" value="完 成" />&nbsp;
+										<a href="check_info.php"><input type="button" class="btn btn-default" value="返 回" /></a>
+								</div>
 							</div>
 						</form>
 						</div>
@@ -261,6 +268,8 @@
 			return true;
 		}
 	</script>
+	<script src="js/jquery.js"></script>
+	<script src="js/bootstrap.min.js"></script>
 </body>
 
 </html>
@@ -301,10 +310,12 @@ else{
 				WHERE s_id='$s_id'";
 	$re3=$mysqli->query($sql_name2) or die($mysqli->error);
 	if($re and $re2 and $re3){
-		echo"<meta http-equiv=\"refresh\" content=\"2;url=check_info.php\">";
-		echo"信息维护成功！<p>";
-		echo"2秒后返回";
-
+?>
+		<center>
+		<meta http-equiv="refresh" content="2;url=check_info.php">
+		信息维护成功！<p>
+		2秒后返回
+<?php
 	}
 }
 ?>

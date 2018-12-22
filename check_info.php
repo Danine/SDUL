@@ -167,9 +167,11 @@
 									</div>
 								</div>
 								<div>&nbsp;</div>
-								<div align='center'>
-									<a href='edit_info.php'><input type='button' value='维 护' /></a>&nbsp;&nbsp;&nbsp;
-									<a href='index.php'><input type='button' value='返 回' /></a>
+								<div class="form-group">
+									<div align="center">
+										<a href='edit_info.php'><input type='button' class="btn btn-primary" value='维 护' /></a>&nbsp;
+										<a href='index.php'><input type='button' class="btn btn-default" value='返 回' /></a>
+									</div>
 								</div>
 							</form>
 						</div>

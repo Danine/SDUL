@@ -35,7 +35,7 @@
 
 			<form action="login.php" method="post" onsubmit="return r()" class="login-form">
 				<div class="login-wrap">
-					<p class="login-img"><a> <img width="255" height="55" src="http://bkjws.sdu.edu.cn/res/ui/metronic/image/sd_logo.png"
+					<p class="login-img"><a> <img width="255" height="55" src="img/sd_logo.png"
 							 alt="Logo"></a></p>
 					<div class="input-group">
 						<span class="input-group-addon"><i class="icon_profile"></i></span>
@@ -68,13 +68,19 @@
 		$row=mysqli_fetch_row($result);//获取数据库中本id行的内容
 		$num=$result->num_rows;
 		if($num==0){
+			echo"<center>";
+			echo"<meta http-equiv=\"refresh\" content=\"1;url=login.php\">";
 			echo"WRONG id or password.<p>";
-			echo"click <a href='login.php'>here</a> to relogin";
+			echo"即将返回登录界面……";
+			// echo"click <a href='login.php'>here</a> to relogin";
 		}
 		else{
+			echo"<center>";
 			setcookie("userid",$userid);
+			echo"<meta http-equiv=\"refresh\" content=\"1;url=index.php\">";
 			echo"Welcome, $row[1]<p>";
-			echo"click <a href='index.php'>here</a> to enter";
+			echo"即将进入系统……";
+			// echo"click <a href='index.php'>here</a> to enter";
 		}
 	}
 ?>

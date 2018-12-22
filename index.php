@@ -103,7 +103,9 @@
 				<p>您的登录时间为：</p>
 				<p id="failure">QAQ</p>
 				<div id="txt"></div>
-				<a href='exit.php'><input type='button' value='退 出' />
+				<div class="form-group">
+				<a href='exit.php'><input type='button' class="btn btn-default" value='退 出' />
+				</div>
 				<?php
 				}
 				?>
