@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>SDUL学生信息系统</title>
+	<title>SDUL学生请假系统</title>
 	<!-- font icon -->
 	<link href="css/elegant-icons-style.css" rel="stylesheet" />
 	<!-- Custom styles -->
@@ -13,7 +13,7 @@
 </head>
 
 <body>
-	<form class="form-horizontal" action="check_info.php" method="post">
+	<form class="form-horizontal" action="check_leave.php" method="post">
 		<section id="container" class="">
 			<header class="header dark-bg">
 				<a href="index.php" class="logo"><img width="163" height="45" src="img/logo.png" alt="Logo"></a>
@@ -66,18 +66,18 @@
 				<section id="main-content">
 					<section class="panel">
 					<?php
-							if(!isset($_COOKIE["userid"]) or $_COOKIE["userid"]==""){
+						if(!isset($_COOKIE["userid"]) or $_COOKIE["userid"]==""){
 					?>
-						<tr>
-							<td>你还没有登录！点<a href="login.php">我</a>登录</td>
-						</tr>
+					<tr>
+						<td>你还没有登录！点<a href="login.php">我</a>登录</td>
+					</tr>
 					<?php
-						}
-						else{
+					}
+					else{
 					?>
 						<header class="panel-heading">
 							<div class="col-sm-10 btn-group">
-								<a class="btn btn-primary" style="margin-top:-10px" href="#"><i class="icon_plus_alt2">&nbsp;增加请假信息</i></a>
+								<a class="btn btn-primary" style="margin-top:-10px" href="leave.php"><i class="icon_plus_alt2">&nbsp;增加请假信息</i></a>
 							</div>
 						</header>
 						<?php
