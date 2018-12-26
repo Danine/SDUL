@@ -50,7 +50,7 @@
 							<ul class="sub"></ul>
 						</li>
 						<li class="sub-menu">
-							<a href="javascript:;" class="">
+							<a href="check_leave.php" class="">
 								<i class="icon_table"></i>请假系统</a>
 							<ul class="sub"></ul>
 						</li>

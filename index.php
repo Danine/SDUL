@@ -13,27 +13,25 @@
 	<title>SDUL学生信息系统</title>
 	<script>
 		function displayDate(){
-    	document.getElementById("failure").innerHTML=Date();
-    }
-    function startTime(){
-    	var today=new Date();
-    	var h=today.getHours();
-  	  var m=today.getMinutes();
-    	var s=today.getSeconds();
-  	  m=checkTime(m);
-    	s=checkTime(s);
-    	document.getElementById('txt').innerHTML=h+":"+m+":"+s;
-  	  t=setTimeout(function(){startTime()},500);
-    }
-    function checkTime(i){
-    	if (i<10){
-	  	  i="0" + i;
-	    }
-	    return i;
-    }
-    </script>
-
-
+		document.getElementById("failure").innerHTML=Date();
+	}
+	function startTime(){
+		var today=new Date();
+		var h=today.getHours();
+		var m=today.getMinutes();
+		var s=today.getSeconds();
+		m=checkTime(m);
+		s=checkTime(s);
+		document.getElementById('txt').innerHTML=h+":"+m+":"+s;
+		t=setTimeout(function(){startTime()},500);
+	}
+	function checkTime(i){
+		if (i<10){
+			i="0" + i;
+		}
+		return i;
+	}
+	</script>
 </head>
 <!-- 设置为当HTML页面加载完成时 -->
 
@@ -73,7 +71,7 @@
 					</li>
 
 					<li class="sub-menu">
-						<a href="javascript:;" class="">
+						<a href="check_leave.php" class="">
 							<i class="icon_table"></i>请假系统</a>
 						<ul class="sub"></ul>
 					</li>
@@ -91,14 +89,16 @@
 			<section id="main-content">
 				<?php
 				if(!isset($_COOKIE["userid"]) or $_COOKIE["userid"]=="")
-     			{
-       			?>
+				{
+				?>
 				<tr>
-					<td>你还没有登录！点<a href="login.php">我</a>登录</td>
+					<td><p>你还没有登录！</td>
+					<td><p>点<a href="login.php">我</a>登录</td>
+					<td><p>点<a href="register.php">我</a>注册</td>
 				</tr>
 				<?php
-    			}
-    			else{
+				}
+				else{
 				?>
 				<p>您的登录时间为：</p>
 				<p id="failure">QAQ</p>
